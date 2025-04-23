@@ -1,0 +1,51 @@
+<div class="table wrap">
+  <div style="margin-bottom: 15px;">
+    {% if SCRAPYD_SERVERS_AMOUNT > 1 %}
+    <a class="button multinode" href="{{ url_multinode_delproject }}">{{ g.multinode|safe }}</a>
+    {% endif %}
+
+    <a class="button danger" href="javascript:;" onclick="execXHR('{{ url_delproject }}', 'versions_of_{{ project }}');">
+      删除项目
+    </a>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>版本</th>
+        <th>爬虫列表</th>
+        <th>启动爬虫</th>
+        <th>删除</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for version, version_readable, url_listspiders, url_multinode_delversion, url_delversion in results %}
+      <tr>
+        <td>{{ version + version_readable }}</td>
+        <td>
+          <a class="state normal" href="javascript:;"
+          onclick="execXHR('{{ url_listspiders }}', 'listspiders{{ project + version }}');">
+          爬虫列表
+          </a>
+        </td>
+        <td id="listspiders{{ project + version }}" class="spiders"></td>
+        <td id="delversion{{ project + version }}">
+          {% if SCRAPYD_SERVERS_AMOUNT > 1 %}
+          <a class="state multinode" href="{{ url_multinode_delversion }}">
+            {{ g.multinode|safe }}
+          </a>
+          {% endif %}
+
+          <a class="state delete" href="javascript:;"
+          onclick="execXHR(
+                '{{ url_delversion }}',
+                'delversion{{ project + version }}',
+              );">
+          删除
+          </a>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
