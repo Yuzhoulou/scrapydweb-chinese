@@ -155,7 +155,7 @@ print(get_localzone())</pre>
           </el-col>
         </el-form-item>
 
-        <el-form-item label="用户代理">
+        <el-form-item label="User-Agent">
           <el-col :span="9">
             <el-select v-model="form.USER_AGENT" placeholder="The default User-Agent for crawling" clearable>
               <el-option :label="form.CUSTOM_USER_AGENT" value="custom"></el-option>
@@ -167,7 +167,7 @@ print(get_localzone())</pre>
           </el-col>
         </el-form-item>
 
-        <el-form-item label="服从rebots协议">
+        <el-form-item label="服从robots协议">
           <el-col :span="9">
             <el-select v-model="form.ROBOTSTXT_OBEY" placeholder="Whether to respect robots.txt policies" clearable>
               <el-option label="True" value="True"></el-option>

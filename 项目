@@ -69,6 +69,8 @@ docker的端口映射会将主机的请求（例如http://127.0.0.1:6800)转发�
 绑定127.0.0.1可能会导致转发失败，绑定0.0.0.0确保服务监听所有网络接口，包括DOCKER桥接网络接口
 
 
+linux 下载
+
 项目改进
 1.scrapydweb使用docker重新启动后不会自动保存爬虫队列，需要手动再次添加启动
 
@@ -82,7 +84,8 @@ docker的端口映射会将主机的请求（例如http://127.0.0.1:6800)转发�
 
 4. exec logparser -dir /code/gc_public_sentiment/logs 启用logparser
 
-5. 需要将scrapydweb前端修改为中文，使用setup.py修改所需依赖的版本，再在本地生成scrapydweb-1.6.0-py3-none-any.whl， python setup.py bdist_wheels。
+5. 需要将scrapydweb前端修改为中文，使用scrapydweb-master/setup.py修改所需依赖的版本，再在本地生成scrapydweb-1.6.0-py3-none-any.whl， python setup.py bdist_wheels。
    在dockerfile里修改强行安装本地的scrapydweb.whl。避免依赖版本冲突。
 
 6. 有冲突的依赖版本idna==2.7 flask==2.0.0
+
