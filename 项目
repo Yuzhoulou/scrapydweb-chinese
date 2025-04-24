@@ -1,5 +1,5 @@
-启动命令： python D:\scrapydweb\scrapydweb-master\scrapydweb\run.py
 
+<<<<<<< HEAD
 配置文件：scrapydweb-master/scrapydweb/default_settings.py
 
 连接 scrapyd：D:\scrapydweb\scrapydweb-master\scrapydweb\views\baseview.py
@@ -89,3 +89,5 @@ linux 下载
 
 6. 有冲突的依赖版本idna==2.7 flask==2.0.0
 
+=======
+>>>>>>> 0f0724f887f5dd2803a7336387434463d2e41c91
