@@ -84,7 +84,7 @@
         <th>状态</th>
         <th>运行时间</th>
         <th>请求数</th>
-        <th>容器(item对象)数</th>
+        <th>items数</th>
         <th>统计</th>
         <th>日志</th>
         {% if SHOW_SCRAPYD_ITEMS and running_jobs and (running_jobs[0]['url_items'] or running_jobs[-1]['url_items']) %}
@@ -154,7 +154,7 @@
         <th>执行时间</th>
         <th>完成时间</th>
         <th>请求数</th>
-        <th>容器(item对象)数</th>
+        <th>items数</th>
         <th>统计</th>
         <th>日志</th>
         {% if SHOW_SCRAPYD_ITEMS and finished_jobs and (finished_jobs[0]['url_items'] or finished_jobs[-1]['url_items']) %}

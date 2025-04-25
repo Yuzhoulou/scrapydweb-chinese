@@ -1,5 +1,3 @@
-[:abc: English](./README.md) | :mahjong: 简体中文
-
 # ScrapydWeb：用于 Scrapyd 集群管理的 web 应用，支持 Scrapy 日志分析和可视化。
 
 [![PyPI - scrapydweb Version](https://img.shields.io/pypi/v/scrapydweb.svg)](https://pypi.org/project/scrapydweb/)
